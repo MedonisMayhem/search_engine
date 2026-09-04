@@ -1,2 +1,0 @@
-C:\mingw64\bin\ar.exe qc libsearch_engine_lib.a CMakeFiles/search_engine_lib.dir/src/converterJSON.cpp.obj
-C:\mingw64\bin\ranlib.exe libsearch_engine_lib.a
