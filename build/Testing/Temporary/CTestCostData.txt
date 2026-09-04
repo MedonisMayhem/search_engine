@@ -1,0 +1,10 @@
+SampleTest.AssertionTrue 3 0.00675487
+ConverterJSONTest.GetRequests_ValidFile 5 0.00969758
+ConverterJSONTest.GetRequests_MissingFile 2 0.00848375
+ConverterJSONTest.GetResponsesLimit_ValidValue 2 0.0133533
+ConverterJSONTest.GetResponsesLimit_DefaultValue 1 0.0072718
+ConverterJSONTest.PutAnswers_HandlesMixOfResults 3 0.0117994
+ConverterJSONTest.GetTextDocuments_ThrowsIfConfigMissing 2 0.00887615
+ConverterJSONTest.GetTextDocuments_ThrowsIfVersionIncorrect 1 0.0150551
+ConverterJSONTest.GetTextDocuments_ThrowsIfVersionMissing 1 0.0143308
+---

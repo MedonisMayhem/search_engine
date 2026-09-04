@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260901-1511-Experimental"
+	Name="(empty)"
+	Generator="ctest-4.3.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="FRIDAY"
+	OSRelease="10.0.19045"
+	OSVersion="Windows 10"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="7"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="15360"
+	TotalPhysicalMemory="16281"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2592.000000"
+	>
+	<Testing>
+		<StartDateTime>Sep 04 19:34 [NON-UTF-8-BYTE-0xC0][NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xF5][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xEA][NON-UTF-8-BYTE-0xEE][NON-UTF-8-BYTE-0xE5] [NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xE4][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xEE][NON-UTF-8-BYTE-0xE5] [NON-UTF-8-BYTE-0xE2][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xE5][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xFF]</StartDateTime>
+		<StartTestTime>1788536091</StartTestTime>
+		<TestList>
+			<Test>./ConverterJSONTest.GetRequests_ValidFile</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>ConverterJSONTest.GetRequests_ValidFile</Name>
+			<Path>.</Path>
+			<FullName>./ConverterJSONTest.GetRequests_ValidFile</FullName>
+			<FullCommandLine>D:\PetProgramm\search_engine\build\search_engine_test.exe "--gtest_filter=ConverterJSONTest.GetRequests_ValidFile" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<StartTestTime>1788536091.104750</StartTestTime>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.011425</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>D:\PetProgramm\search_engine\build\search_engine_test.exe "--gtest_filter=ConverterJSONTest.GetRequests_ValidFile" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyVUctqwzAQvOsr9hgfbMg1kENpWkMLjrHbXixjFHvjCvRIpXX6+5XtEJKWQrKnWWZ2dzQqBmOk6UELaRYR7J3VsFnxHCl3tndCa+5RuPazQdNLg3w3SNXxpsOD5721vUJCT7F37UXLp3ZEzbg4aVuWWcIVpJME3gIDe6kIHazh0ZojuoBfym02UkmKVODXEKBvPoSS3bNUyKr1uWooTsaXQNOy0fgJ+0ESJqyKz1VDquxOqJlHc5TOGo0maJHi4fBLfLnzjzlWQfGewVT17d7nAdi+3j4EiyVoH93hbZ4AsiRUxG5LgML3xp39Ntf5/pcrOGGS6zvhbflDWT5txkBmbcJ+ABRPxxI=</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Sep 04 19:34 [NON-UTF-8-BYTE-0xC0][NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xF5][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xEA][NON-UTF-8-BYTE-0xEE][NON-UTF-8-BYTE-0xE5] [NON-UTF-8-BYTE-0xF1][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xE4][NON-UTF-8-BYTE-0xE0][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xF2][NON-UTF-8-BYTE-0xED][NON-UTF-8-BYTE-0xEE][NON-UTF-8-BYTE-0xE5] [NON-UTF-8-BYTE-0xE2][NON-UTF-8-BYTE-0xF0][NON-UTF-8-BYTE-0xE5][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xFF]</EndDateTime>
+		<EndTestTime>1788536091</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
