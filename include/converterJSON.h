@@ -15,7 +15,7 @@ public:
 	* @return Возвращает список с содержимым файлов перечисленных
 	* в config.json
 	*/
-	std::vector<std::string>GetTextDocuments();
+	std::vector<std::string> GetTextDocuments();
 	/**
 	* Метод считывает поле max_responses для определения предельного
 	* количества ответов на один запрос

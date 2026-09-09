@@ -8,6 +8,7 @@ set(CMAKE_TLS_VERIFY OFF)
 
 add_library(search_engine_lib 
     src/converterJSON.cpp
+    src/invertedIndex.cpp
 )
 
 target_include_directories(search_engine_lib PUBLIC

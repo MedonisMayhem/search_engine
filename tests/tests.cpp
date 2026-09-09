@@ -1,7 +1,12 @@
 #include <gtest/gtest.h>
+//
 #include <fstream>
 #include <filesystem>
 #include "converterJSON.h"
+//
+#include <vector>
+#include <string>
+#include "ivertedIndex.h"
 
 void CreateTestFile(const std::string& filename, const std::string& content) {
     std::ofstream out(filename);
@@ -14,7 +19,7 @@ void RemoveTestFile(const std::string& filename) {
     std::remove(filename.c_str());
 }
 
-
+// ====== РАЗДЕЛ КЛАССА ConverterJSON ======
 // --- ТЕСТЫ ДЛЯ МЕТОДА GetTextDocuments ---
 
 
@@ -151,6 +156,92 @@ TEST(ConverterJSONTest, GetTextDocuments_ThrowsIfConfigMissing) {
     EXPECT_THROW(converter.GetTextDocuments(), std::runtime_error);
 }
 
+// ====== РАЗДЕЛ КЛАССА InvertedIndex ======
+
+void TestInvertedIndexFunctionality(
+    const std::vector<std::string>& docs,
+    const std::vector<std::string>& requests,
+    const std::vector<std::vector<Entry>>& expected
+) {
+    std::vector<std::vector<Entry>> result;
+    InvertedIndex idx;
+    
+    idx.updateDocumentBase(docs);
+    
+    for (const auto& request : requests) {
+        std::vector<Entry> word_count = idx.GetWordCount(request);
+        result.push_back(word_count);
+    }
+    
+    ASSERT_EQ(result, expected);
+}
+
+// --- ТЕСТ 1: Базовая проверка на двух простых предложениях ---
+TEST(TestCaseInvertedIndex,TESTBASIC)
+{
+    const std::vector<std::string> docs { 
+        "london is the capital of great britain",
+        "big ben is the nickname for the Great bell of the striking clock"
+    };
+
+    const std::vector<std::string> requests = {"london", "the"};
+    
+    const std::vector<std::vector<Entry>> expected = {
+        {
+            {0, 1}
+        },
+        {
+            {0, 1}, {1, 3}
+        }
+    };
+    
+    TestInvertedIndexFunctionality(docs, requests, expected);
+}
+
+// --- ТЕСТ 2: Проверка на множественные повторения слов ---
+TEST(TestCaseInvertedIndex, TestBasic2) {
+    const std::vector<std::string> docs = {
+        "milk milk milk milk water waterwater",
+        "milk water water",
+        "milk milk milk milk milk water water water waterwater",
+        "americano cappuccino"
+    };
+    
+    const std::vector<std::string> requests = {"milk", "water", "cappuccino"};
+    
+    const std::vector<std::vector<Entry>> expected = {
+        {
+            {0, 4}, {1, 1}, {2, 5}
+        },
+        {
+            {0, 1}, {1, 2}, {2, 3} 
+        },
+        {
+            {3, 1}
+    }};
+    
+    TestInvertedIndexFunctionality(docs, requests, expected);
+}
+
+// --- ТЕСТ 3: Проверка отсутствующих слов (Негативный тест) ---
+TEST(TestCaseInvertedIndex, TestInvertedIndexMissingWord) {
+    const std::vector<std::string> docs = {
+        "abcdefghijkl",
+        "statement"
+    };
+    const std::vector<std::string> requests = {"m", "statement"};
+    
+    const std::vector<std::vector<Entry>> expected = {
+        {
+            // Для слова "m" ожидается абсолютно пустой вектор, так как его нет в базе
+        },
+        {
+            {1, 1} // "statement" есть в doc_id 1 в количестве 1 штуки
+        }
+    };
+    
+    TestInvertedIndexFunctionality(docs, requests, expected);
+}
 
 //ASSERT_... (Критическая проверка)
 //EXPECT_... (Мягкая проверка)
