@@ -6,7 +6,7 @@
 //
 #include <vector>
 #include <string>
-#include "ivertedIndex.h"
+#include "invertedIndex.h"
 
 void CreateTestFile(const std::string& filename, const std::string& content) {
     std::ofstream out(filename);
