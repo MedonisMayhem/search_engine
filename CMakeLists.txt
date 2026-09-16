@@ -9,7 +9,10 @@ set(CMAKE_TLS_VERIFY OFF)
 add_library(search_engine_lib 
     src/converterJSON.cpp
     src/invertedIndex.cpp
+    src/searchServer.cpp
 )
+
+
 
 target_include_directories(search_engine_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include 
@@ -18,6 +21,9 @@ target_include_directories(search_engine_lib PUBLIC
 
 add_executable(${PROJECT_NAME} src/main.cpp)
 
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+    search_engine_lib
+)
 include(FetchContent)
 FetchContent_Declare(
   googletest

@@ -27,7 +27,7 @@ public:
 	* @paramword слово,частоту вхождений которого необходимо определить
 	* @return возвращает подготовленный список с частотой слов
 	*/
-	std::vector<Entry> GetWordCount(const std::string& word);
+	std::vector<Entry> getWordCount(const std::string& word);
 private:
 	std::vector<std::string> docs; // Список содержимого документов (индекс вектора = doc_id)
 	std::map<std::string, std::vector<Entry>> freq_dictionary; // Частотный словарь

@@ -5,7 +5,6 @@
 
 int main()
 {
-    
     try
     {
         ConverterJSON converter;
@@ -16,9 +15,20 @@ int main()
 
         SearchServer server(index);
         
-        //изменить входные данные метода putAnswers или конвертировать через цикл?
-        //converter.putAnswers(server.search(converter.GetRequests()));
-
+        //конвертировавание результат из метода search для ввода в метод putAnswers
+        std::vector<std::vector<RelativeIndex>> search_result = server.search(converter.GetRequests());
+        std::vector<std::vector<std::pair<int,float>>> answers;
+        
+        for(const auto& query_result : search_result)
+        {
+            std::vector<std::pair<int,float>> answer;
+            for(const auto& item : query_result)
+            {
+                answer.push_back({static_cast<int>(item.doc_id), item.rank});
+            }
+            answers.push_back(answer);
+        }
+        converter.putAnswers(answers);
     }
     catch(const std::exception& e)
     {
