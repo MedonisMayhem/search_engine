@@ -13,8 +13,8 @@
 
 * **Язык программирования:** C++ (Стандарт C++17)
 * **Система сборки:** CMake (версия 3.14+)
-* **Работа с JSON:** Библиотека [nlohmann/json](https://github.com)
-* **Юнит-тестирование:** [Google Test (GTest)](https://github.com)
+* **Работа с JSON:** Библиотека [nlohmann/json](https://github.com/nlohmann/json)
+* **Юнит-тестирование:** [Google Test (GTest)](https://github.com/google/googletest)
 * **Среда разработки (IDE):** VSC/ Qt Creator / MinGW
 
 # Структура
